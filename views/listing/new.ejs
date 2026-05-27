@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wander Home : Add New Listings</title>
+</head>
+<body>
+    <h3>Add New Listings</h3>
+    <form method="post" action="/listings">
+        <label for="title">Enter your hotel Name : </label>
+        <input type="text" id="title" name="listing[title]" placeholder="Enter title here"/>
+        <br><br>
+        <label for="description">Enter Description : </label>
+        <textarea id="description" rows="5" cols="30" name="listing[description]" placeholder="Enter description here"></textarea>
+        <br><br>
+        <label for="image">Enter your hotel image/URL : </label>
+        <input type="text" id="image" name="listing[image]" placeholder="Enter image link here"/>
+        <br><br>
+        <label for="price">Enter Price : </label>
+        <input type="number" id="price" name="listing[price]"/>
+        <br><br>
+        <label for="country">Enter your country : </label>
+        <input type="text" id="country" name="listing[country]" placeholder="Enter country here"/>
+        <br><br>
+        <label for="location">Enter Location : </label>
+        <input type="text" id="location" name="listing[location]" placeholder="Enter Location here"/>
+        <br><br>
+        <button>Add</button>
+    </form>
+    
+</body>
+</html>

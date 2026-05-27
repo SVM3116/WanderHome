@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wander Home : Add new Listing</title>
+</head>
+<body>
+    <h3>All Listings</h3>
+    <form method="GET" action="/listings/new">
+        <button>Add New Listing</button>
+    </form>
+    <ul>
+   <% for(list of allListings){ %>
+        <li>
+            <a href="/listings/<%=list._id%>"><%= list.title%>, <%=list.location%></a>
+        </li>
+   <%  } %>
+</ul>
+</body>
+</html>
+
