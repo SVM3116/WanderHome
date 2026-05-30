@@ -1,22 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wander Home : Add new Listing</title>
-</head>
+<% layout('/layouts/boilerplate') -%>
 <body>
     <h3>All Listings</h3>
-    <form method="GET" action="/listings/new">
-        <button>Add New Listing</button>
-    </form>
-    <ul>
-   <% for(list of allListings){ %>
-        <li>
-            <a href="/listings/<%=list._id%>"><%= list.title%>, <%=list.location%></a>
-        </li>
-   <%  } %>
-</ul>
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+        <% for(list of allListings){ %>
+            <a href="/listings/<%=list._id%>" class="listing-link">
+                <div class="card col">
+                    <img src="<%=list.image%>" 
+                    class="card-img-top" 
+                    alt="listing_image" 
+                    style="height: 20rem";
+                    />
+                    <div class="card-img-overlay"></div>
+                    <div class="card-body">
+                        <p class="card-text">
+                        <b><%= list.title%> </b> <br>
+                            &#x20B9; <%= list.price.toLocaleString("en-IN")%> / night
+                        </p>
+                    </div>
+                </div>
+            </a>
+            
+        <%  } %>  
+    </div>
+    
 </body>
-</html>
+
 
